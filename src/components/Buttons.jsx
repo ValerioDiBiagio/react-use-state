@@ -9,8 +9,8 @@ import Card from "./Card"
 export default function Button({ title, description, active, toggle }) {
 
     return (
-        <div>
-            <button onClick={toggle}>{title}</button>
+        <div className="container-bt">
+            <button className="btn" onClick={toggle}>{title}</button>
             {active && <Card description={description} />}
         </div>
     )
