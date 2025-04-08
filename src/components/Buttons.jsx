@@ -6,18 +6,12 @@ import Card from "./Card"
 
 
 // funzione bottone
-export default function Button({ title, description }) {
-
-    const [click, setClick] = useState(false)
-
-    const toggle = () => {
-        setClick(prev => !prev);
-    }
+export default function Button({ title, description, active, toggle }) {
 
     return (
         <div>
             <button onClick={toggle}>{title}</button>
-            {click && <Card description={description} />}
+            {active && <Card description={description} />}
         </div>
     )
 }
