@@ -5,14 +5,21 @@ import Button from "./Buttons";
 import languages from '../data/languages'
 import { useState } from "react";
 
+
+
 // funzione main
 export default function Main() {
 
     const [activeLanguage, setActiveLanguage] = useState(null);
 
+
+    if (!languages.length) {
+        return <div>Nessun linguaggio trovato</div>
+    }
+
     return (
         <main>
-            <div>
+            <div className="container">
                 {languages.map(language => <Button key={language.id}
                     title={language.title}
                     description={language.description}
