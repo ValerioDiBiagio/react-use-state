@@ -1,5 +1,5 @@
 // importare il bottone
-import Button from "./Button";
+import Button from "./Buttons";
 
 // importare array linguaggi
 import languages from '../data/languages'
@@ -7,6 +7,10 @@ import languages from '../data/languages'
 // funzione main
 export default function Main() {
     return (
-        <Button title={languages} />
+        <main>
+            <div>
+                {languages.map(language => <Button key={language.id} title={language.title} />)}
+            </div>
+        </main>
     )
 }
