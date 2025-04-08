@@ -1,3 +1,4 @@
+// funzione per l'header
 export default function Header() {
     return (
         <header>
