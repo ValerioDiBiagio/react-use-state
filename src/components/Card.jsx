@@ -1,9 +1,8 @@
 // funzione della card
-export default function Card() {
+export default function Card({ description }) {
     return (
         <div>
-            <p>sono la card</p>
+            <p>{description}</p>
         </div>
-
     )
 }

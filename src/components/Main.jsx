@@ -9,7 +9,7 @@ export default function Main() {
     return (
         <main>
             <div>
-                {languages.map(language => <Button key={language.id} title={language.title} />)}
+                {languages.map(language => <Button key={language.id} title={language.title} description={language.description} />)}
             </div>
         </main>
     )
